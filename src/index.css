@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.font-settings {
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+.search-div {
+  background-image: linear-gradient(rgba(159, 244, 255, 0.26), rgba(159, 244, 255, 0.26)), url("../img/headBackground.jpg");
+  display: flex;
+  padding: 5% 0% 1% 0%;
+  margin: -1% -1% 1% -1%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.search-div h1 {
+  margin: 2% 0% 0% 2%;
+  color: white;
+}
+.search-div .search-subDiv {
+  margin: 3% 0% 0% 55%;
+}
+.search-div .search-subDiv input {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid rgba(159, 244, 255, 0.26) 2px;
+  background-color: white;
+  margin-right: 10px;
+}
+.search-div .search-subDiv input:focus {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid rgba(159, 244, 255, 0.26) 2px;
+  background-color: rgb(194, 248, 255);
+  outline: none;
+}
+.search-div .search-subDiv button {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid rgba(159, 244, 255, 0.26) 2px;
+  background-color: white;
+  cursor: pointer;
+}
+.search-div .search-subDiv button:hover {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid rgba(159, 244, 255, 0.26) 2px;
+  background-color: rgb(194, 248, 255);
+  cursor: pointer;
+}
+.search-div .search-subDiv button:active {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid rgba(159, 244, 255, 0.26) 2px;
+  background-color: rgb(97, 237, 255);
+  cursor: pointer;
+}
+
+.content-div {
+  background-color: rgb(238, 255, 249);
+  margin: 3% 15% 3% 15%;
+  padding: 2% 5% 2% 5%;
+  text-align: center;
+  box-shadow: 10px 5px 5px rgba(0, 225, 255, 0.26);
+}
+.content-div button {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid rgba(159, 244, 255, 0.26) 2px;
+  background-color: white;
+  padding-top: 2px;
+  cursor: pointer;
+  color: rgb(42, 45, 94);
+}
+.content-div .btn-name {
+  float: left;
+  padding: 1px 10px 1px 10px;
+}
+.content-div p {
+  text-align: justify;
+  margin: 10% 15% 0% 15%;
+  color: rgb(42, 45, 94);
+}
+.content-div .btn-close {
+  margin: 15px 0px -5px 0px;
+}
+
+.current-page {
+  color: rgb(42, 45, 94);
+  background-color: rgb(97, 237, 255);
+  padding: 10px 20px 10px 20px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 4px 5px 5px rgba(0, 225, 255, 0.226);
+  cursor: pointer;
+}
+
+.previous-next-page {
+  color: rgb(42, 45, 94);
+  background-color: rgb(194, 248, 255);
+  padding: 10px 20px 10px 20px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 4px 5px 5px rgba(0, 225, 255, 0.226);
+  cursor: pointer;
+}
+
+.page-list {
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

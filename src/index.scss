@@ -1,0 +1,116 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$myFont: 'Raleway', sans-serif;
+$cover: rgba(159, 244, 255, 0.26);    //Цвет для покрывала
+$hoverColor: rgb(194, 248, 255);      //Цвет для срабатывания при наведении
+$activColor: rgb(97, 237, 255);       //Цвет для активации элемента
+$contentColor: rgb(42, 45, 94);
+
+@mixin search-style($color, $size: 10px) {
+    padding: $size;
+    border-radius: $size;
+    border: solid $cover 2px;
+    background-color: $color;
+}
+@mixin content-style($color, $size: 10px) {
+    @include search-style($color, $size);
+    padding-top: 2px;
+}
+@mixin backgroundImage-settings {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@mixin page-button($color) {
+    color: $contentColor;
+    background-color: $color;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 4px 5px 5px rgba(0, 225, 255, 0.226);
+    cursor: pointer;
+}
+
+.font-settings {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.search-div {
+    background-image: linear-gradient($cover, $cover),
+      url('../img/headBackground.jpg');
+    display: flex;
+    padding: 5% 0% 1% 0%;
+    margin: -1% -1% 1% -1%;
+
+    @include backgroundImage-settings;
+
+    h1 {
+        margin: 2% 0% 0% 2%;
+        color: white;
+    }
+
+    .search-subDiv {
+        margin: 3% 0% 0% 55%;
+
+        input {
+            @include search-style(white);
+            margin-right: 10px;
+        }
+        input:focus {
+            @include search-style($hoverColor);
+            outline: none;
+        }
+        button {
+            @include search-style(white);
+            cursor: pointer;
+        }
+        button:hover {
+            @include search-style($hoverColor);
+            cursor: pointer;
+        }
+        button:active {
+            @include search-style($activColor);
+            cursor: pointer;
+        }
+    }
+}
+
+.content-div {
+    background-color: rgb(238, 255, 249);
+    margin: 3% 15% 3% 15%;
+    padding: 2% 5% 2% 5%;
+    text-align: center;
+    box-shadow: 10px 5px 5px rgba(0, 225, 255, 0.26);
+    
+    button {
+        @include content-style(white);
+        cursor: pointer;
+        color: $contentColor;
+    }
+
+    .btn-name {
+        float: left;
+        padding: 1px 10px 1px 10px;
+    }
+    
+    p {
+        text-align: justify;
+        margin: 10% 15% 0% 15%;
+        color: $contentColor;
+    }
+
+    .btn-close {
+        margin: 15px 0px -5px 0px;
+    }
+}
+
+.current-page {
+    @include page-button($activColor);
+}
+.previous-next-page {
+    @include page-button($hoverColor);
+}
+.page-list {
+    text-align: center;
+}
