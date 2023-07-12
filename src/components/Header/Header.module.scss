@@ -1,0 +1,53 @@
+@import '../../style/mixins';
+@import '../../style/variables';
+@import '../../style/fonts';
+
+.header {
+    background-image: linear-gradient($cover, $cover), 
+        url('../../../img/headBackground.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 4% 0% 1% 0%;
+    margin: -1% -1% 1% -1%;
+    margin-bottom: 50px;
+    font-family: $mainFont;
+
+    &__title {
+        margin: 6% 0% 0% 2%;
+        // font-family: $mainFont;
+        color: white;
+    }
+
+    .search {
+        margin: 3% 0% 0% 66%;
+
+        input {
+            border-radius: 10px;
+            padding: 10px;
+            border: solid $cover 2px;
+            background-color: white;
+            margin-right: 10px;
+        }
+        input:focus {
+            background-color: $hoverColor;
+            outline: none;
+        }
+
+        button {
+            font-family: $mainFont;
+            background-color: white;
+            padding: 10px;
+            border: solid $cover 2px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: $hoverColor;
+        }
+        button:active {
+            background-color: $activColor;
+        }
+    }
+}

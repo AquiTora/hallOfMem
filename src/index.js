@@ -1,17 +1,16 @@
 ﻿import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Header from './components/Header/Header';
 
 class PersonsContent extends React.Component {
     render() {
-        console.log('В PersonsContent\n' + `${this.props.persons[0].photo}`);
         const filterText = this.props.filterText;
         
         const title = this.props.persons.map((element) => {
             if (element.title.toUpperCase().indexOf(filterText) === -1) {
                 return;
             }
-            console.log('В цикле title\n' + `${element.photo}`);
             return <PersonContentShowOrHide 
                      key={element.key} 
                      title={element.title}
@@ -269,9 +268,10 @@ class Main extends React.Component {
         console.log('В main\n' + `${this.props.persons[0].photo}`);
         return (
             <div>
-                <SearchBar
+                <Header/>
+                {/* <SearchBar
                   filterText={this.state.filterText}
-                  onFilterTextChange={this.handleFilterTextChange} />
+                  onFilterTextChange={this.handleFilterTextChange} /> */}
                 <PersonsContent 
                   index={this.state.index}
                   pageNumber={this.state.pageNumber}
